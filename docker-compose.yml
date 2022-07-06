@@ -8,15 +8,15 @@ services:
       - mongodb:/data/db
   
   api:
-  build: .
-  ports:
-    - 4000:3000
-  enviorment:
-    PORT: 3000
-    MONGODB_URI: monogodb://mongo_db:27017
-    DB_NAME: my_db
-    NAME: tg_boot_mongodb
-  depends:
+    build: .
+    ports:
+      - 4000:3000
+    enviorment:
+      PORT: 3000
+      MONGODB_URI: monogodb://mongo_db:27017
+      DB_NAME: my_db
+      NAME: tg_boot_mongodb
+   depends:
     - mongo_db  
        
 volumes:
