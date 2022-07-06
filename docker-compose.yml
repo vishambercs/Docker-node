@@ -19,7 +19,7 @@ services:
   api:
   build: .
   ports:
-    - 4000:3000
+      - 4000:3000
   enviorment:
     PORT: 3000
     MONGODB_URI: monogodb://mongo_db:27017
