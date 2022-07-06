@@ -1,25 +1,16 @@
 version: '3.9'
 services:
-  node:
-    restart: always
-    build: .
-    ports:
-      - 80:3000
-    volumes:
-      - ./:/code
   mongo_db:
     container_name: tg_boot_mongodb_continer  
     image: mongo:latest
     restart: always
-    ports:
-      - 27017:27017
     volumes:
       - mongodb:/data/db
   
   api:
   build: .
   ports:
-      - 4000:3000
+    - 4000:3000
   enviorment:
     PORT: 3000
     MONGODB_URI: monogodb://mongo_db:27017
@@ -27,7 +18,6 @@ services:
     NAME: tg_boot_mongodb
   depends:
     - mongo_db  
-    # DB_USER=DATABASE USER
-    # DB_PASS=DATABASE USER PASSWORD   
+       
 volumes:
   mongo_db:{}
