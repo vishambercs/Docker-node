@@ -1,0 +1,16 @@
+{
+"name": "node-express-docker-image",
+"version": "1.0.0",
+"description": "Nodejs Express Docker Image Example",
+"author": "hackins",
+"main": "index.js",
+"license": "ISC",
+"keywords": [
+"nodejs",
+"express",
+"bootstrap"
+],
+"dependencies": {
+"express": "^4.17.1"
+}
+}
